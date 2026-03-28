@@ -1,0 +1,36 @@
+$schema: https://raw.githubusercontent.com/oyvindberg/bleep/master/schema.json
+$version: 0.0.14
+jvm:
+  name: graalvm-community:24.0.1
+
+resolvers:
+  - name: github-packages
+    type: maven
+    uri: github://oyvindberg/bleep-publishing-test
+
+templates:
+  template-common:
+    scala:
+      version: 3.3.3
+    publish:
+      groupId: build.bleep.test
+      description: Test project for bleep publishing
+      url: https://github.com/oyvindberg/bleep-publishing-test
+      developers:
+        - id: oyvindberg
+          name: Øyvind Raddum Berg
+          url: https://github.com/oyvindberg
+      licenses:
+        - name: MIT
+          url: http://opensource.org/licenses/MIT
+          distribution: repo
+
+projects:
+  core:
+    extends: template-common
+    dependencies:
+      - com.lihaoyi::fansi:0.5.0
+
+  utils:
+    extends: template-common
+    dependsOn: core

@@ -10,6 +10,9 @@ resolvers:
   - name: gitlab-packages
     type: maven
     uri: gitlab://gitlab.com/api/v4/projects/80725883/packages/maven
+  - name: artifact-registry
+    type: maven
+    uri: artifactregistry://europe-north1-maven.pkg.dev/datoria-parser-110fd/maven-test
 
 templates:
   template-common:

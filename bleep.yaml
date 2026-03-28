@@ -7,6 +7,9 @@ resolvers:
   - name: github-packages
     type: maven
     uri: github://oyvindberg/bleep-publishing-test
+  - name: gitlab-packages
+    type: maven
+    uri: gitlab://gitlab.com/api/v4/projects/80725883/packages/maven
 
 templates:
   template-common:
